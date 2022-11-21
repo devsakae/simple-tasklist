@@ -1,0 +1,30 @@
+.tasks {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 40rem;
+}
+
+.tasks ul {
+  list-style: none;
+  padding: 1rem;
+}
+
+.tasks li {
+  border: 1px solid #ccc;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+.details {
+  padding-top: 10px;
+}
+
+.tasks span {
+  font-size: small;
+  color: white;
+  background: #741188;
+  border: 1px black solid;
+  border-radius: 4px;
+  padding: 2px;
+  margin-right: 5px;
+}
