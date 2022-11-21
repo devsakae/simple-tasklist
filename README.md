@@ -1,6 +1,8 @@
 # Simple Tasklist!
 A simple project for managing tasks using React. Good for beginners on React!
 
+<img src="https://github.com/devsakae/simple-tasklist/blob/main/public/screenshot.png" alt="Simple Tasklist" />
+
 ## Instructions
 * Clone this repository
 * Enter the folder by typing <code>cd simple-tasklist</code>
