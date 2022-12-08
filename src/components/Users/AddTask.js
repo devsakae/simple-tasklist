@@ -19,7 +19,7 @@ export const AddTask = props => {
       return;
     }
     props.onAddNewTask(task);
-    // Not nice, but does the trick
+    // Not nice, but does the trick. Changing.
     taskInputRef.current.value = '';
   };
 
