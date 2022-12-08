@@ -19,6 +19,8 @@ export const AddTask = props => {
       return;
     }
     props.onAddNewTask(task);
+    // Not nice, but does the trick
+    taskInputRef.current.value = '';
   };
 
   const clearError = () => {
