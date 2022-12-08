@@ -1,35 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Card } from '../UI/Card';
 import { Button } from '../UI/Button';
 import { ErrorModal } from '../UI/ErrorModal';
 import styles from './AddTask.module.css';
 
 export const AddTask = props => {
-  const [task, setTask] = useState('');
-  const [deadline, setDeadline] = useState('');
   const [error, setError] = useState();
+  const taskInputRef = useRef();
 
   const addNewTask = (event) => {
     event.preventDefault();
-    if (task.trim().length === 0 || deadline.trim().length === 0) {
+    const task = taskInputRef.current.value;
+    if (task.trim().length === 0) {
       setError({
         title: 'Invalid task',
         error: 'Please type something into the input fields'
       })
       return;
     }
-    props.onAddNewTask(task, deadline);
-    setTask('');
-    setDeadline('');
+    props.onAddNewTask(task);
   };
-
-  const taskHandler = ({ target }) => {
-    setTask(target.value);
-  }
-
-  const deadlineHandler = ({ target }) => {
-    setDeadline(target.value);
-  }
 
   const clearError = () => {
     setError(null);
@@ -44,15 +34,7 @@ export const AddTask = props => {
           <input
             id="task"
             type="text"
-            onChange={taskHandler}
-            value={task}
-            />
-          <label htmlFor="duedate">Deadline</label>
-          <input
-            id="deadline"
-            type="date"
-            onChange={deadlineHandler}
-            value={deadline}  
+            ref={ taskInputRef }
             />
           <Button type="submit">Add new task</Button>
         </form>

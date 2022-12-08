@@ -15,9 +15,6 @@ export const TasksList = props => {
               <span>
                 Created on { task.created }
               </span>
-              <span>
-                Due date: { task.deadline }
-              </span>
             </div>
           </li>
         )) }
