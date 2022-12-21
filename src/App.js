@@ -13,7 +13,7 @@ const addTaskHandler = (newTask, newDeadline) => {
   setTasksList((prev) => {
     return [
       ...prev,
-      { task: newTask, created: new Date().toLocaleDateString(), deadline: newDeadline }
+      { task: newTask, created: new Date().toLocaleDateString() }
     ];
   });
 }
