@@ -4,12 +4,9 @@ import { TasksList } from './components/Users/TasksList';
 
 function App() {
 const [tasksList, setTasksList] = useState([]);
+document.title = 'My simple tasklist';
 
-useEffect(() => {
-  document.title = 'My tasklist';
-})
-
-const addTaskHandler = (newTask, newDeadline) => {
+const addTaskHandler = (newTask) => {
   setTasksList((prev) => {
     return [
       ...prev,
